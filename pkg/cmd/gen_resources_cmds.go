@@ -29,8 +29,8 @@ type ResourceData struct {
 }
 
 type OperationData struct {
-	Path     string
-	HTTPVerb string
+	Path      string
+	HTTPVerb  string
 	PropFlags map[string]string
 }
 
@@ -148,8 +148,8 @@ func getTemplateData() (*TemplateData, error) {
 				}
 
 				data.Namespaces[nsName].Resources[resCmdName].Operations[op.MethodName] = &OperationData{
-					Path:     op.Path,
-					HTTPVerb: httpString, 
+					Path:      op.Path,
+					HTTPVerb:  httpString,
 					PropFlags: properties,
 				}
 			}
